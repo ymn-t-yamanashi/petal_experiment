@@ -7,6 +7,8 @@
 # General application configuration
 import Config
 
+config :petal_components, :error_translator_function, {PetalExperimentWeb.ErrorHelpers, :translate_error}
+
 # Configures the endpoint
 config :petal_experiment, PetalExperimentWeb.Endpoint,
   url: [host: "localhost"],
