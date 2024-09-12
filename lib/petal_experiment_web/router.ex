@@ -17,7 +17,8 @@ defmodule PetalExperimentWeb.Router do
   scope "/", PetalExperimentWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", PetalLive.Index, :index
+    # get "/", PageController, :home
   end
 
   # Other scopes may use custom stacks.

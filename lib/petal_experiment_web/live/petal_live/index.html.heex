@@ -1,0 +1,63 @@
+<p class="text-2xl mb-10">Petal Components検証</p>
+
+<p class="text-xl mb-1 mt-10">accordion</p>
+<.accordion class="w-full">
+  <:item heading="Accordion">
+    <.p>
+      ほげほげ
+    </.p>
+  </:item>
+
+  <:item heading="Accordion 2">
+    <.p>
+      ほげほげ
+    </.p>
+  </:item>
+</.accordion>
+
+<p class="text-xl mb-1 mt-10">alert</p>
+<.alert color="success" label="This is a success alert" />
+
+<p class="text-xl mb-1 mt-10">avatar</p>
+<.avatar size="xs" />
+
+<p class="text-xl mb-1 mt-10">badge</p>
+<.badge color="primary" label="Primary" />
+
+<p class="text-xl mb-1 mt-10">breadcrumbs</p>
+<.breadcrumbs
+  separator="chevron"
+  links={[
+    %{label: "Link 1", to: "#"},
+    %{label: "Link 2", to: "#", link_type: "live_patch"},
+    %{label: "Link 3", to: "#", link_type: "live_redirect"}
+  ]}
+/>
+
+<p class="text-xl mb-1 mt-10">button</p>
+<.button color="primary" label="Primary" />
+
+<p class="text-xl mb-1 mt-10">card</p>
+<.card>
+  <.card_content category="カテゴリ" class="max-w-sm" heading="ヘッダー">
+    内容 12345689123456891234568912345689123456891234568912345689123456891234568912345689
+  </.card_content>
+</.card>
+
+<p class="text-xl mb-1 mt-10">dropdown</p>
+<.dropdown>
+  <.dropdown_menu_item label="ほげほげ" />
+  <.dropdown_menu_item label="ほげほげ" />
+</.dropdown>
+
+<p class="text-xl mb-1 mt-10">spinner</p>
+<.spinner show={true} size="sm" />
+
+<p class="text-xl mb-1 mt-10">rating</p>
+<.rating rating={4} total={5} />
+
+<p class="text-xl mb-1 mt-10">pagination</p>
+<.pagination link_type="a" class="mb-5" path="/?page" current_page={1} total_pages={10} />
+
+<p class="text-xl mb-1 mt-10">progress</p>
+<.progress color="primary" value={10} max={100} class="max-w-full" />
